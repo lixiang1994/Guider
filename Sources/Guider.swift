@@ -81,6 +81,7 @@ public extension Guider {
         index = 0
         
         completion?()
+        completion = nil
     }
 }
 

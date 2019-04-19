@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
 s.name         = "Guider"
-s.version      = "1.0.2"
+s.version      = "1.0.3"
 s.summary      = "高亮引导组件"
 
 s.homepage     = "https://github.com/lixiang1994/Guider"
