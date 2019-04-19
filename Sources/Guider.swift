@@ -86,7 +86,7 @@ public extension Guider {
 
 public extension Guider {
     
-    public struct Page {
+    struct Page {
         let items: [PageItem]
         let backgroundColor: UIColor
         let action: (()->Void)
@@ -109,7 +109,7 @@ public extension Guider {
 
 public extension Guider {
     
-    public struct PageItem {
+    struct PageItem {
         let focus: Focus
         let isThrough: Bool
         
@@ -178,7 +178,7 @@ public extension Guider {
     /// - rounded: 圆角矩形
     /// - roundedCorners: 自定义圆角矩形
     /// - cirque: 圆
-    public enum Focus {
+    enum Focus {
         // UIView
         case view(UIView)
         case viewInsets(UIView, UIEdgeInsets)
@@ -197,7 +197,7 @@ public extension Guider {
     ///
     /// - image: 图片
     /// - view: 自定义视图
-    public enum Prompt {
+    enum Prompt {
         case image(UIImage, Position)
         case view(UIView, Position)
     }
@@ -206,7 +206,7 @@ public extension Guider {
     ///
     /// - top: 上 (间距)
     /// - bottom: 下 (间距)
-    public enum Position {
+    enum Position {
         case top(CGFloat)
         case bottom(CGFloat)
     }
