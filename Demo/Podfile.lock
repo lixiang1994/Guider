@@ -1,0 +1,16 @@
+PODS:
+  - Guider (1.0.0)
+
+DEPENDENCIES:
+  - Guider (from `../`)
+
+EXTERNAL SOURCES:
+  Guider:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Guider: 7d84780da63998c4d962e4577a0f9367c99d6001
+
+PODFILE CHECKSUM: 7a769624f340025f31632f4f942d657b5bc22329
+
+COCOAPODS: 1.6.1
