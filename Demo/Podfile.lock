@@ -1,5 +1,5 @@
 PODS:
-  - Guider (1.0.0)
+  - Guider (1.0.1)
 
 DEPENDENCIES:
   - Guider (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Guider: 7d84780da63998c4d962e4577a0f9367c99d6001
+  Guider: 661eb60a389fd18dda85d3f690f51d530e7064cb
 
 PODFILE CHECKSUM: 7a769624f340025f31632f4f942d657b5bc22329
 

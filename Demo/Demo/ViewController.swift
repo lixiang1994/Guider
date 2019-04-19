@@ -72,7 +72,7 @@ extension ViewController: UITableViewDataSource {
                 return
             }
             
-            let item = PageItem(.view(cell)).set(focus: {
+            let item = Guider.PageItem(.view(cell)).set(focus: {
                 print("focus tap")
                 Guider.next()
                 
@@ -81,7 +81,7 @@ extension ViewController: UITableViewDataSource {
                 Guider.next()
             })
             
-            let page = Page(items: [item]) {
+            let page = Guider.Page(items: [item]) {
                 print("page tap")
                 Guider.next()
             }
@@ -94,9 +94,12 @@ extension ViewController: UITableViewDataSource {
                 return
             }
             
-            let focus = Focus.viewInsets(cell, .init(top: 5, left: 5, bottom: 5, right: 5))
+            let focus = Guider.Focus.viewInsets(
+                cell,
+                .init(top: 10, left: 10, bottom: 10, right: 10)
+            )
             
-            let item = PageItem(focus).set(focus: {
+            let item = Guider.PageItem(focus).set(focus: {
                 print("focus tap")
                 Guider.next()
                 
@@ -105,7 +108,7 @@ extension ViewController: UITableViewDataSource {
                 Guider.next()
             })
             
-            let page = Page(items: [item]) {
+            let page = Guider.Page(items: [item]) {
                 print("page tap")
                 Guider.next()
             }
@@ -118,9 +121,9 @@ extension ViewController: UITableViewDataSource {
                 return
             }
             
-            let focus = Focus.viewInsetsCorner(cell, .zero, cornerRadius: 10)
+            let focus = Guider.Focus.viewInsetsCorner(cell, .zero, cornerRadius: 10)
             
-            let item = PageItem(focus).set(focus: {
+            let item = Guider.PageItem(focus).set(focus: {
                 print("focus tap")
                 Guider.next()
                 
@@ -129,7 +132,7 @@ extension ViewController: UITableViewDataSource {
                 Guider.next()
             })
             
-            let page = Page(items: [item]) {
+            let page = Guider.Page(items: [item]) {
                 print("page tap")
                 Guider.next()
             }
@@ -138,9 +141,9 @@ extension ViewController: UITableViewDataSource {
             }
             
         case 3: // 高亮视图+自定义边距+蒙版图形
-            let focus = Focus.viewInsetsMask(topButton, .zero, #imageLiteral(resourceName: "gear"))
+            let focus = Guider.Focus.viewInsetsMask(topButton, .zero, #imageLiteral(resourceName: "gear"))
             
-            let item = PageItem(focus).set(focus: {
+            let item = Guider.PageItem(focus).set(focus: {
                 print("focus tap")
                 Guider.next()
                 
@@ -149,7 +152,7 @@ extension ViewController: UITableViewDataSource {
                 Guider.next()
             })
             
-            let page = Page(items: [item]) {
+            let page = Guider.Page(items: [item]) {
                 print("page tap")
                 Guider.next()
             }
