@@ -1,8 +1,8 @@
 Pod::Spec.new do |s|
 
 s.name         = "Guider"
-s.version      = "1.0.3"
-s.summary      = "高亮引导组件"
+s.version      = "1.0.4"
+s.summary      = "An elegant highlight focus guide written in swift"
 
 s.homepage     = "https://github.com/lixiang1994/Guider"
 

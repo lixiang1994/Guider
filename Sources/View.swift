@@ -35,11 +35,18 @@ class View: UIView {
             options: .new,
             context: nil
         )
+        superview?.addObserver(
+            self,
+            forKeyPath: "bounds",
+            options: .new,
+            context: nil
+        )
         super.didMoveToSuperview()
     }
     
     override func removeFromSuperview() {
         superview?.removeObserver(self, forKeyPath: "frame")
+        superview?.removeObserver(self, forKeyPath: "bounds")
         super.removeFromSuperview()
     }
     
@@ -356,10 +363,12 @@ extension View {
     
     private func addFrameObserver(_ view: UIView) {
         view.addObserver(self, forKeyPath: "frame", options: .new, context: nil)
+        view.addObserver(self, forKeyPath: "bounds", options: .new, context: nil)
     }
     
     private func removeFrameObserver(_ view: UIView) {
         view.removeObserver(self, forKeyPath: "frame")
+        view.removeObserver(self, forKeyPath: "bounds")
     }
     
     override func observeValue(forKeyPath keyPath: String?,
@@ -368,16 +377,17 @@ extension View {
                                context: UnsafeMutableRawPointer?) {
         guard let object = object else { return }
         guard let keyPath = keyPath else { return }
+        guard keyPath == "frame" || keyPath == "bounds" else { return }
         
         if
             let view = object as? UIView,
             let superview = superview, superview === view {
             // 父视图发生变化时 同步frame
-            if keyPath == "frame" { frame = superview.bounds }
+            frame = superview.bounds
         }
         
         // 任何视图发生变化时 重新绘制
-        if keyPath == "frame" { setNeedsDisplay() }
+        setNeedsDisplay()
     }
 }
 
