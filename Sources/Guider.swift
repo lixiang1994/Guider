@@ -80,8 +80,9 @@ public extension Guider {
         pages.removeAll()
         index = 0
         
-        completion?()
+        let temp = completion
         completion = nil
+        temp?()
     }
 }
 
