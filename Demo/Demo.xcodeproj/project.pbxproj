@@ -13,6 +13,7 @@
 		C933FC2A22697C840042478B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C933FC2822697C840042478B /* Main.storyboard */; };
 		C933FC2C22697C850042478B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C933FC2B22697C850042478B /* Assets.xcassets */; };
 		C933FC2F22697C850042478B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C933FC2D22697C850042478B /* LaunchScreen.storyboard */; };
+		C9F1713F2274780700056512 /* PromptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F1713E2274780700056512 /* PromptView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		C933FC2B22697C850042478B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C933FC2E22697C850042478B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C933FC3022697C850042478B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9F1713E2274780700056512 /* PromptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptView.swift; sourceTree = "<group>"; };
 		EC67F08D8C0F4B3378FAE3A9 /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.release.xcconfig"; path = "Target Support Files/Pods-Demo/Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,6 +86,7 @@
 				C933FC2B22697C850042478B /* Assets.xcassets */,
 				C933FC2D22697C850042478B /* LaunchScreen.storyboard */,
 				C933FC3022697C850042478B /* Info.plist */,
+				C9F1713E2274780700056512 /* PromptView.swift */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C933FC2722697C840042478B /* ViewController.swift in Sources */,
+				C9F1713F2274780700056512 /* PromptView.swift in Sources */,
 				C933FC2522697C840042478B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

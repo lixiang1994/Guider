@@ -18,7 +18,9 @@ class ViewController: UIViewController {
         "高亮视图",
         "高亮视图+自定义边距",
         "高亮视图+自定义边距+圆角",
-        "高亮视图+自定义边距+蒙版图形"
+        "高亮视图+自定义边距+蒙版图形",
+        "高亮视图+提示图片",
+        "高亮视图+提示视图"
     ]
     
     override func viewDidLoad() {
@@ -160,6 +162,61 @@ extension ViewController: UITableViewDataSource {
                 print("finish")
             }
             
+        case 4: // 高亮视图+提示图片
+            let tempView = UIView(frame: CGRect(x: 60, y: 300, width: 130, height: 50))
+            tempView.backgroundColor = #colorLiteral(red: 1, green: 0.3954350948, blue: 0.06483297795, alpha: 1)
+            view.addSubview(tempView)
+            
+            let focus = Guider.Focus.viewInsetsCorner(
+                tempView,
+                .init(top: 10, left: 10, bottom: 10, right: 10),
+                cornerRadius: 10
+            )
+            
+            let item = Guider.PageItem(focus).set(focus: {
+                print("focus tap")
+                Guider.next()
+                
+            }).set(prompt: { (index) in
+                print("prompt tap")
+                Guider.next()
+            }).add(prompt: .image(#imageLiteral(resourceName: "prompt_1"), .top(5)))
+            
+            let page = Guider.Page(items: [item]) {
+                print("page tap")
+                Guider.next()
+            }
+            Guider.start([page]) {
+                print("finish")
+                tempView.removeFromSuperview()
+            }
+        
+        case 5: // 高亮视图+提示视图
+            guard let cell = tableView.cellForRow(at: indexPath) else {
+                return
+            }
+            
+            let prompt = PromptView(frame: CGRect(x: 0, y: 0, width: 130, height: 50))
+            
+            let focus = Guider.Focus.viewInsetsCorner(cell, .zero, cornerRadius: 10)
+            
+            let item = Guider.PageItem(focus).set(focus: {
+                print("focus tap")
+                Guider.next()
+                
+            }).set(prompt: { (index) in
+                print("prompt tap")
+                Guider.next()
+            }).add(prompt: .view(prompt, .bottom(5)))
+            
+            let page = Guider.Page(items: [item]) {
+                print("page tap")
+                Guider.next()
+            }
+            Guider.start([page]) {
+                print("finish")
+            }
+
         default:
             break
         }
