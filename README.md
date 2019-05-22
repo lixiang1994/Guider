@@ -68,7 +68,7 @@ Guider.Page(items: [item]) {
 #### Start Guider
 ```swift
 // The default guide page will be added to the current keyWindow
-Guider.start([page]) {
+Guider.Provider.start([page]) {
     // Guided completion
 }
 ```
@@ -76,12 +76,12 @@ Guider.start([page]) {
 #### Next page
 
 ```swift
-Guider.next()
+Guider.Provider.next()
 ```
 
 #### Stop Guider
 ```swift
-Guider.stop()
+Guider.Provider.stop()
 ```
 
 ### Focus Type
