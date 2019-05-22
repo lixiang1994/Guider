@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
 s.name         = "Guider"
-s.version      = "1.0.5"
+s.version      = "1.1.0"
 s.summary      = "An elegant highlight focus guide written in swift"
 
 s.homepage     = "https://github.com/lixiang1994/Guider"
@@ -21,6 +21,5 @@ s.requires_arc = true
 s.frameworks = "UIKit", "Foundation"
 
 s.swift_version = "5.0"
-#s.swift_versions = ["4.2", "5.0"]
 
 end

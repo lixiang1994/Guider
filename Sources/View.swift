@@ -15,10 +15,10 @@ import UIKit
 
 class View: UIView {
     
-    private let config: Guider.Page
+    private let config: Page
     private var prompts: [[UIView]] = []
     
-    init(frame: CGRect, config: Guider.Page) {
+    init(frame: CGRect, config: Page) {
         self.config = config
         super.init(frame: frame)
         
@@ -284,7 +284,7 @@ extension View {
         }
     }
     
-    private func rect(_ focus: Guider.Focus) -> CGRect {
+    private func rect(_ focus: Focus) -> CGRect {
         switch focus {
         case .view(let view):
             return convert(view, to: self)
@@ -471,7 +471,7 @@ extension View {
     
     private func origin(focus rect: CGRect,
                         prompt size: CGSize,
-                        position: Guider.Position) -> CGPoint {
+                        position: Position) -> CGPoint {
         switch position {
         case .top(let offset):
             return CGPoint(x: 0, y: rect.minY - size.height - offset)

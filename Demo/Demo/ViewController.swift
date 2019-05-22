@@ -76,18 +76,18 @@ extension ViewController: UITableViewDataSource {
             
             let item = Guider.PageItem(.view(cell)).set(focus: {
                 print("focus tap")
-                Guider.next()
+                Guider.Provider.next()
                 
             }).set(prompt: { (index) in
                 print("prompt tap")
-                Guider.next()
+                Guider.Provider.next()
             })
             
             let page = Guider.Page(items: [item]) {
                 print("page tap")
-                Guider.next()
+                Guider.Provider.next()
             }
-            Guider.start([page]) {
+            Guider.Provider.start([page]) {
                 print("finish")
             }
             
@@ -103,18 +103,18 @@ extension ViewController: UITableViewDataSource {
             
             let item = Guider.PageItem(focus).set(focus: {
                 print("focus tap")
-                Guider.next()
+                Guider.Provider.next()
                 
             }).set(prompt: { (index) in
                 print("prompt tap")
-                Guider.next()
+                Guider.Provider.next()
             })
             
             let page = Guider.Page(items: [item]) {
                 print("page tap")
-                Guider.next()
+                Guider.Provider.next()
             }
-            Guider.start([page]) {
+            Guider.Provider.start([page]) {
                 print("finish")
             }
             
@@ -127,18 +127,18 @@ extension ViewController: UITableViewDataSource {
             
             let item = Guider.PageItem(focus).set(focus: {
                 print("focus tap")
-                Guider.next()
+                Guider.Provider.next()
                 
             }).set(prompt: { (index) in
                 print("prompt tap")
-                Guider.next()
+                Guider.Provider.next()
             })
             
             let page = Guider.Page(items: [item]) {
                 print("page tap")
-                Guider.next()
+                Guider.Provider.next()
             }
-            Guider.start([page]) {
+            Guider.Provider.start([page]) {
                 print("finish")
             }
             
@@ -147,18 +147,18 @@ extension ViewController: UITableViewDataSource {
             
             let item = Guider.PageItem(focus).set(focus: {
                 print("focus tap")
-                Guider.next()
+                Guider.Provider.next()
                 
             }).set(prompt: { (index) in
                 print("prompt tap")
-                Guider.next()
+                Guider.Provider.next()
             })
             
             let page = Guider.Page(items: [item]) {
                 print("page tap")
-                Guider.next()
+                Guider.Provider.next()
             }
-            Guider.start([page]) {
+            Guider.Provider.start([page]) {
                 print("finish")
             }
             
@@ -175,18 +175,18 @@ extension ViewController: UITableViewDataSource {
             
             let item = Guider.PageItem(focus).set(focus: {
                 print("focus tap")
-                Guider.next()
+                Guider.Provider.next()
                 
             }).set(prompt: { (index) in
                 print("prompt tap")
-                Guider.next()
+                Guider.Provider.next()
             }).add(prompt: .image(#imageLiteral(resourceName: "prompt_1"), .top(5)))
             
             let page = Guider.Page(items: [item]) {
                 print("page tap")
-                Guider.next()
+                Guider.Provider.next()
             }
-            Guider.start([page]) {
+            Guider.Provider.start([page]) {
                 print("finish")
                 tempView.removeFromSuperview()
             }
@@ -202,18 +202,18 @@ extension ViewController: UITableViewDataSource {
             
             let item = Guider.PageItem(focus).set(focus: {
                 print("focus tap")
-                Guider.next()
+                Guider.Provider.next()
                 
             }).set(prompt: { (index) in
                 print("prompt tap")
-                Guider.next()
+                Guider.Provider.next()
             }).add(prompt: .view(prompt, .bottom(5)))
             
             let page = Guider.Page(items: [item]) {
                 print("page tap")
-                Guider.next()
+                Guider.Provider.next()
             }
-            Guider.start([page]) {
+            Guider.Provider.start([page]) {
                 print("finish")
             }
 
