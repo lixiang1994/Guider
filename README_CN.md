@@ -68,7 +68,7 @@ Guider.Page(items: [item]) {
 #### 开始引导
 ```swift
 // 默认情况引导页面会添加到当前keyWindow上 也可以通过设置view: 参数来指定添加的视图
-Guider.start([page]) {
+Guider.Provider.start([page]) {
     // 引导完成
 }
 ```
@@ -76,12 +76,12 @@ Guider.start([page]) {
 #### 下一页
 
 ```swift
-Guider.next()
+Guider.Provider.next()
 ```
 
 #### 停止引导
 ```swift
-Guider.stop()
+Guider.Provider.stop()
 ```
 
 ### 焦点类型
