@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
 s.name         = "Guider"
-s.version      = "1.1.0"
+s.version      = "1.2.0"
 s.summary      = "An elegant highlight focus guide written in swift"
 
 s.homepage     = "https://github.com/lixiang1994/Guider"
@@ -22,4 +22,9 @@ s.frameworks = "UIKit", "Foundation"
 
 s.swift_version = "5.0"
 
+  s.subspec 'Privacy' do |ss|
+      ss.resource_bundles = {
+        "Privacy" => 'Sources/PrivacyInfo.xcprivacy'
+      }
+  end
 end
